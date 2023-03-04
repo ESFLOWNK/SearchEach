@@ -1,0 +1,4 @@
+print("Hello world")
+print("XD")
+print("WTF")
+print(4+4)
