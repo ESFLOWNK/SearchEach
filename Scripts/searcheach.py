@@ -2,6 +2,7 @@
 
 import funcs
 import sys
+from msvcrt import getch
 
 def main():
 
@@ -20,6 +21,7 @@ def main():
         "\tFILE = The file to check\n"+
         "\tCHARACTER = The character that the program will search and show its content\n"+
         "\tFILE_RESULT = The name of the file where the data will be write")
+        getch()
         exit()
 
     cont = funcs.read(fl)

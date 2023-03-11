@@ -14,20 +14,9 @@ def read(fl: str):
 def search(sr: str,cont: list):
     content: list[str] = []
 
-    res = ''
-    into = False
     for i in cont:
-        res = ''
-        into = False
-        for itr in range(len(i)-2):
-            if into == True:
-                res += i[itr]
-            if i[itr] == sr:
-                if into == True:
-                    into = False
-                if into == False:
-                    into = True
-        content.append(res)
+        if i.find(sr) != i.rfind(sr):
+            content.append(i[i.find(sr):i.rfind(sr)+1])
 
     return content
 
@@ -35,14 +24,13 @@ def write(cont: list,flr: str,sr: str):
     
     f = open(flr,'w')
 
-    cont.remove('')
+    if len(cont) > 0:
+        f.write(cont[0])
 
     for i in cont:
-        if i == '':
+        if i == '' or i == cont[0]:
             continue
-        if i == cont[len(cont)-1]:
-            f.write(sr+i+sr)
-            break
-        f.write(sr+i+sr+"\n")
+
+        f.write("\n"+i)
     
     f.close()

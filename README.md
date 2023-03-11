@@ -1,6 +1,7 @@
 # SearchEach
 
 First. Thanks for seing this.
+
 Second. If the program has an error please report it. My Discord is: ESFLOWNK#0119.
 
 # How to use
@@ -28,7 +29,7 @@ I create a file named "history.txt" with this content:
 ```text file
 -The world is fantastic- and then the world exploded.
 But only a kid kept living.
-He happend too many adventures together to a -bear named ber-.
+He happened too many adventures together to a -bear named ber-.
 ```
 
 And then I open the cmd (or powershell) and write this:
