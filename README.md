@@ -22,6 +22,12 @@ searched_character: The character that the program will search and show it's con
 
 file_with_the_results: The program will create this file and write the results there.
 
+# News
+
+2023 - March - 11:
+
+* I changed the mode in which the files are read. Now the files are read so that the result is what is between the first searched character found to the last searched character found.
+
 # Example
 
 I create a file named "history.txt" with this content:
