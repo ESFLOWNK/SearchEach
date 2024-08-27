@@ -1,6 +1,5 @@
 #encoding="utf8"
 
-import funcs
 from pathlib import Path
 import sys
 from msvcrt import getch
@@ -46,7 +45,7 @@ def main():
         if sr == "strings":
             sr = '"'
 
-        res = funcs.search(sr=sr,fl=Path(fl).read_text())
+        res = search(sr=sr,fl=Path(fl).read_text())
 
     elif len(sys.argv) == 5:
         #fl = file
@@ -58,7 +57,7 @@ def main():
         ssr = sys.argv[3]
         flr = sys.argv[4]
 
-        res = funcs.search(sr=sr,ssr=ssr,fl=Path(fl).read_text())
+        res = search(sr=sr,ssr=ssr,fl=Path(fl).read_text())
 
     else:
         print("searcheach FILE CHARACTER [CHARACTER2] FILE_RESULT\n"+
