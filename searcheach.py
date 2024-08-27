@@ -11,18 +11,28 @@ def search(sr: str = "",ssr = None, fl: str = ""):
     
     #Result
     res = ""
-
     j = -1
+
+    #Two characters case
     if ssr:
+        #K is used for know when there are searched text inside searched text
+        #Example (text(inside text))
+        k = 1
         for i in range(len(fl)):
             if j == -1 and fl[i] == sr:
                 j = i
+            elif fl[i] == sr:
+                k += 1
             elif not j == -1 and fl[i] == ssr:
-                res += fl[j:i+1] + "\n"
-                j = -1
-
+                k -= 1
+                if k == 0:
+                    res += fl[j:i+1] + "\n"
+                    k = 1
+                    j = -1
+                    
         return res[:-1]
     
+    #One character case
     for i in range(len(fl)):
         if j == -1 and fl[i] == sr:
             j = i
