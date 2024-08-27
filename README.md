@@ -97,10 +97,3 @@ If it happens then you have to write this instead:
 
 
 If you put the quotes, don't close the powershell. press CTRL+C instead.
-
-____                  ________________________
-\    \                 /    /    ______//     _______/
-  \    \             /    /    /           |     /
-    \    \         /    /|   |           |    |
-      \    \___/    /  |    \_______\     \________
-        \_______/     \__________\\___________\
